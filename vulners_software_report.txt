@@ -1,0 +1,659 @@
+Отчет анализа программного обеспечения на наличие уязвимостей
+-------------------------------------------------------------
+
+## Программное обеспечение: LibreOffice 6.0.7 ##
+1. Уязвимости: детектировано [2]
+2. CVE: обнаружено [2]: CVE-2018-14939, CVE-2018-14939
+3. Эксплойты НЕ НАЙДЕНЫ!
+4. Детализация:
+ 4.1. CVE-2018-14939
+   ▪ CVE уязвимости: CVE-2018-14939
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: The get_app_path function in desktop/unx/source/start.c in LibreOffice through 6.0.5 mishandles the realpath function in certain environments such as ...
+ 4.2. Buffer overflow
+   ▪ CVE уязвимости: CVE-2018-14939
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: The get_app_path function in desktop/unx/source/start.c in LibreOffice through 6.0.5 mishandles the realpath function in certain environments such as ...
+--------------------------------------------------
+
+## Программное обеспечение: 7zip 18.05 ##
+1. Уязвимости: детектировано [2]
+2. CVE: обнаружено [2]: CVE-2018-10115, CVE-2018-10115
+3. Эксплойты НЕ НАЙДЕНЫ!
+4. Детализация:
+ 4.1. CVE-2018-10115
+   ▪ CVE уязвимости: CVE-2018-10115
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: Incorrect initialization logic of RAR decoder objects in 7-Zip 18.03 and before can lead to usage of uninitialized memory, allowing remote attackers t...
+ 4.2. Design/Logic Flaw
+   ▪ CVE уязвимости: CVE-2018-10115
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: Incorrect initialization logic of RAR decoder objects in 7-Zip 18.03 and before can lead to usage of uninitialized memory, allowing remote attackers t...
+--------------------------------------------------
+
+## Программное обеспечение: Adobe Reader 2018.011.20035 ##
+1. Уязвимости: детектировано [42]
+2. CVE: обнаружено [42]: CVE-2018-4997, CVE-2018-4914, CVE-2018-4911, CVE-2018-4906, CVE-2018-4883, CVE-2018-4887, CVE-2018-4879, CVE-2018-4999, CVE-2018-4998, CVE-2018-4915, CVE-2018-4910, CVE-2018-4909, CVE-2018-4899, CVE-2018-4893, CVE-2018-4889, CVE-2018-4913, CVE-2018-4908, CVE-2018-4901, CVE-2018-4905, CVE-2018-4900, CVE-2018-4903, CVE-2018-4892, CVE-2018-4890, CVE-2018-4886, CVE-2018-4884, CVE-2018-4880, CVE-2018-4916, CVE-2018-4907, CVE-2018-4898, CVE-2018-4897, CVE-2018-4904, CVE-2018-4891, CVE-2018-4885, CVE-2018-4872, CVE-2018-4912, CVE-2018-4902, CVE-2018-4896, CVE-2018-4895, CVE-2018-4894, CVE-2018-4888, CVE-2018-4881, CVE-2018-4882
+3. Эксплойты НЕ НАЙДЕНЫ!
+4. Детализация:
+ 4.1. CVE-2018-4997
+   ▪ CVE уязвимости: CVE-2018-4997
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: Adobe Acrobat and Reader versions 2018.009.20050 and earlier, 2017.011.30070 and earlier, and 2015.006.30394 and earlier have an Out-of-bounds write v...
+ 4.2. CVE-2018-4914
+   ▪ CVE уязвимости: CVE-2018-4914
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: An issue was discovered in Adobe Acrobat Reader 2018.009.20050 and earlier versions, 2017.011.30070 and earlier versions, 2015.006.30394 and earlier v...
+ 4.3. CVE-2018-4911
+   ▪ CVE уязвимости: CVE-2018-4911
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: An issue was discovered in Adobe Acrobat Reader 2018.009.20050 and earlier versions, 2017.011.30070 and earlier versions, 2015.006.30394 and earlier v...
+ 4.4. CVE-2018-4906
+   ▪ CVE уязвимости: CVE-2018-4906
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: An issue was discovered in Adobe Acrobat Reader 2018.009.20050 and earlier versions, 2017.011.30070 and earlier versions, 2015.006.30394 and earlier v...
+ 4.5. CVE-2018-4883
+   ▪ CVE уязвимости: CVE-2018-4883
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: An issue was discovered in Adobe Acrobat Reader 2018.009.20050 and earlier versions, 2017.011.30070 and earlier versions, 2015.006.30394 and earlier v...
+ 4.6. CVE-2018-4887
+   ▪ CVE уязвимости: CVE-2018-4887
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: An issue was discovered in Adobe Acrobat Reader 2018.009.20050 and earlier versions, 2017.011.30070 and earlier versions, 2015.006.30394 and earlier v...
+ 4.7. CVE-2018-4879
+   ▪ CVE уязвимости: CVE-2018-4879
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: An issue was discovered in Adobe Acrobat Reader 2018.009.20050 and earlier versions, 2017.011.30070 and earlier versions, 2015.006.30394 and earlier v...
+ 4.8. CVE-2018-4999
+   ▪ CVE уязвимости: CVE-2018-4999
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: Adobe Acrobat and Reader versions 2018.009.20050 and earlier, 2017.011.30070 and earlier, and 2015.006.30394 and earlier have an Out-of-bounds read vu...
+ 4.9. CVE-2018-4998
+   ▪ CVE уязвимости: CVE-2018-4998
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: Adobe Acrobat and Reader versions 2018.009.20050 and earlier, 2017.011.30070 and earlier, and 2015.006.30394 and earlier have a Memory corruption vuln...
+ 4.10. CVE-2018-4915
+   ▪ CVE уязвимости: CVE-2018-4915
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: An issue was discovered in Adobe Acrobat Reader 2018.009.20050 and earlier versions, 2017.011.30070 and earlier versions, 2015.006.30394 and earlier v...
+ 4.11. CVE-2018-4910
+   ▪ CVE уязвимости: CVE-2018-4910
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: An issue was discovered in Adobe Acrobat Reader 2018.009.20050 and earlier versions, 2017.011.30070 and earlier versions, 2015.006.30394 and earlier v...
+ 4.12. CVE-2018-4909
+   ▪ CVE уязвимости: CVE-2018-4909
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: An issue was discovered in Adobe Acrobat Reader 2018.009.20050 and earlier versions, 2017.011.30070 and earlier versions, 2015.006.30394 and earlier v...
+ 4.13. CVE-2018-4899
+   ▪ CVE уязвимости: CVE-2018-4899
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: An issue was discovered in Adobe Acrobat Reader 2018.009.20050 and earlier versions, 2017.011.30070 and earlier versions, 2015.006.30394 and earlier v...
+ 4.14. CVE-2018-4893
+   ▪ CVE уязвимости: CVE-2018-4893
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: An issue was discovered in Adobe Acrobat Reader 2018.009.20050 and earlier versions, 2017.011.30070 and earlier versions, 2015.006.30394 and earlier v...
+ 4.15. CVE-2018-4889
+   ▪ CVE уязвимости: CVE-2018-4889
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: An issue was discovered in Adobe Acrobat Reader 2018.009.20050 and earlier versions, 2017.011.30070 and earlier versions, 2015.006.30394 and earlier v...
+ 4.16. CVE-2018-4913
+   ▪ CVE уязвимости: CVE-2018-4913
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: An issue was discovered in Adobe Acrobat Reader 2018.009.20050 and earlier versions, 2017.011.30070 and earlier versions, 2015.006.30394 and earlier v...
+ 4.17. CVE-2018-4908
+   ▪ CVE уязвимости: CVE-2018-4908
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: An issue was discovered in Adobe Acrobat Reader 2018.009.20050 and earlier versions, 2017.011.30070 and earlier versions, 2015.006.30394 and earlier v...
+ 4.18. CVE-2018-4901
+   ▪ CVE уязвимости: CVE-2018-4901
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: An issue was discovered in Adobe Acrobat Reader 2018.009.20050 and earlier versions, 2017.011.30070 and earlier versions, 2015.006.30394 and earlier v...
+ 4.19. CVE-2018-4905
+   ▪ CVE уязвимости: CVE-2018-4905
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: An issue was discovered in Adobe Acrobat Reader 2018.009.20050 and earlier versions, 2017.011.30070 and earlier versions, 2015.006.30394 and earlier v...
+ 4.20. CVE-2018-4900
+   ▪ CVE уязвимости: CVE-2018-4900
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: An issue was discovered in Adobe Acrobat Reader 2018.009.20050 and earlier versions, 2017.011.30070 and earlier versions, 2015.006.30394 and earlier v...
+ 4.21. CVE-2018-4903
+   ▪ CVE уязвимости: CVE-2018-4903
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: An issue was discovered in Adobe Acrobat Reader 2018.009.20050 and earlier versions, 2017.011.30070 and earlier versions, 2015.006.30394 and earlier v...
+ 4.22. CVE-2018-4892
+   ▪ CVE уязвимости: CVE-2018-4892
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: An issue was discovered in Adobe Acrobat Reader 2018.009.20050 and earlier versions, 2017.011.30070 and earlier versions, 2015.006.30394 and earlier v...
+ 4.23. CVE-2018-4890
+   ▪ CVE уязвимости: CVE-2018-4890
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: An issue was discovered in Adobe Acrobat Reader 2018.009.20050 and earlier versions, 2017.011.30070 and earlier versions, 2015.006.30394 and earlier v...
+ 4.24. CVE-2018-4886
+   ▪ CVE уязвимости: CVE-2018-4886
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: An issue was discovered in Adobe Acrobat Reader 2018.009.20050 and earlier versions, 2017.011.30070 and earlier versions, 2015.006.30394 and earlier v...
+ 4.25. CVE-2018-4884
+   ▪ CVE уязвимости: CVE-2018-4884
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: An issue was discovered in Adobe Acrobat Reader 2018.009.20050 and earlier versions, 2017.011.30070 and earlier versions, 2015.006.30394 and earlier v...
+ 4.26. CVE-2018-4880
+   ▪ CVE уязвимости: CVE-2018-4880
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: An issue was discovered in Adobe Acrobat Reader 2018.009.20050 and earlier versions, 2017.011.30070 and earlier versions, 2015.006.30394 and earlier v...
+ 4.27. CVE-2018-4916
+   ▪ CVE уязвимости: CVE-2018-4916
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: An issue was discovered in Adobe Acrobat Reader 2018.009.20050 and earlier versions, 2017.011.30070 and earlier versions, 2015.006.30394 and earlier v...
+ 4.28. CVE-2018-4907
+   ▪ CVE уязвимости: CVE-2018-4907
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: An issue was discovered in Adobe Acrobat Reader 2018.009.20050 and earlier versions, 2017.011.30070 and earlier versions, 2015.006.30394 and earlier v...
+ 4.29. CVE-2018-4898
+   ▪ CVE уязвимости: CVE-2018-4898
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: An issue was discovered in Adobe Acrobat Reader 2018.009.20050 and earlier versions, 2017.011.30070 and earlier versions, 2015.006.30394 and earlier v...
+ 4.30. CVE-2018-4897
+   ▪ CVE уязвимости: CVE-2018-4897
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: An issue was discovered in Adobe Acrobat Reader 2018.009.20050 and earlier versions, 2017.011.30070 and earlier versions, 2015.006.30394 and earlier v...
+ 4.31. CVE-2018-4904
+   ▪ CVE уязвимости: CVE-2018-4904
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: An issue was discovered in Adobe Acrobat Reader 2018.009.20050 and earlier versions, 2017.011.30070 and earlier versions, 2015.006.30394 and earlier v...
+ 4.32. CVE-2018-4891
+   ▪ CVE уязвимости: CVE-2018-4891
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: An issue was discovered in Adobe Acrobat Reader 2018.009.20050 and earlier versions, 2017.011.30070 and earlier versions, 2015.006.30394 and earlier v...
+ 4.33. CVE-2018-4885
+   ▪ CVE уязвимости: CVE-2018-4885
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: An issue was discovered in Adobe Acrobat Reader 2018.009.20050 and earlier versions, 2017.011.30070 and earlier versions, 2015.006.30394 and earlier v...
+ 4.34. CVE-2018-4872
+   ▪ CVE уязвимости: CVE-2018-4872
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: An issue was discovered in Adobe Acrobat Reader 2018.009.20050 and earlier versions, 2017.011.30070 and earlier versions, 2015.006.30394 and earlier v...
+ 4.35. CVE-2018-4912
+   ▪ CVE уязвимости: CVE-2018-4912
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: An issue was discovered in Adobe Acrobat Reader 2018.009.20050 and earlier versions, 2017.011.30070 and earlier versions, 2015.006.30394 and earlier v...
+ 4.36. CVE-2018-4902
+   ▪ CVE уязвимости: CVE-2018-4902
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: An issue was discovered in Adobe Acrobat Reader 2018.009.20050 and earlier versions, 2017.011.30070 and earlier versions, 2015.006.30394 and earlier v...
+ 4.37. CVE-2018-4896
+   ▪ CVE уязвимости: CVE-2018-4896
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: An issue was discovered in Adobe Acrobat Reader 2018.009.20050 and earlier versions, 2017.011.30070 and earlier versions, 2015.006.30394 and earlier v...
+ 4.38. CVE-2018-4895
+   ▪ CVE уязвимости: CVE-2018-4895
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: An issue was discovered in Adobe Acrobat Reader 2018.009.20050 and earlier versions, 2017.011.30070 and earlier versions, 2015.006.30394 and earlier v...
+ 4.39. CVE-2018-4894
+   ▪ CVE уязвимости: CVE-2018-4894
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: An issue was discovered in Adobe Acrobat Reader 2018.009.20050 and earlier versions, 2017.011.30070 and earlier versions, 2015.006.30394 and earlier v...
+ 4.40. CVE-2018-4888
+   ▪ CVE уязвимости: CVE-2018-4888
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: An issue was discovered in Adobe Acrobat Reader 2018.009.20050 and earlier versions, 2017.011.30070 and earlier versions, 2015.006.30394 and earlier v...
+ 4.41. CVE-2018-4881
+   ▪ CVE уязвимости: CVE-2018-4881
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: An issue was discovered in Adobe Acrobat Reader 2018.009.20050 and earlier versions, 2017.011.30070 and earlier versions, 2015.006.30394 and earlier v...
+ 4.42. CVE-2018-4882
+   ▪ CVE уязвимости: CVE-2018-4882
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: An issue was discovered in Adobe Acrobat Reader 2018.009.20050 and earlier versions, 2017.011.30070 and earlier versions, 2015.006.30394 and earlier v...
+--------------------------------------------------
+
+## Программное обеспечение: nginx 1.14.0 ##
+1. Уязвимости: детектировано [29]
+2. CVE: обнаружено [31]: CVE-2025-23419, CVE-2025-23419, CVE-2024-7347, CVE-2024-7347, CVE-2024-7347, CVE-2024-41723, CVE-2022-41742, CVE-2022-41741, CVE-2021-44228, CVE-2021-44228, CVE-2021-45046, CVE-2021-23017, CVE-2021-3618, CVE-2018-16845, CVE-2018-16844, CVE-2022-25139, CVE-2021-46461, CVE-2021-46462, CVE-2021-46463, CVE-2019-9511, CVE-2019-9513, CVE-2019-9516, CVE-2018-16843, CVE-2019-20372, CVE-2022-41742, CVE-2022-41741, CVE-2022-22950, CVE-2022-22963, CVE-2022-22965, CVE-2021-23055, CVE-2021-23017
+3. Эксплойты НЕ НАЙДЕНЫ!
+4. Детализация:
+ 4.1. UBUNTU-CVE-2025-23419
+   ▪ CVE уязвимости: CVE-2025-23419
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: When multiple server blocks are configured to share the same IP address and port, an attacker can use session resumption to bypass client certificate ...
+ 4.2. CVE-2025-23419
+   ▪ CVE уязвимости: CVE-2025-23419
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: When multiple server blocks are configured to share the same IP address and port, an attacker can use session resumption to bypass client certificate ...
+ 4.3. UBUNTU-CVE-2024-7347
+   ▪ CVE уязвимости: CVE-2024-7347
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: NGINX Open Source and NGINX Plus have a vulnerability in the ngx_http_mp4_module, which might allow an attacker to over-read NGINX worker memory resul...
+ 4.4. CVE-2024-7347
+   ▪ CVE уязвимости: CVE-2024-7347
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: NGINX Open Source and NGINX Plus have a vulnerability in the ngx_http_mp4_module, which might allow an attacker to over-read NGINX worker memory resul...
+ 4.5. USN-7014-2 nginx vulnerability
+   ▪ CVE уязвимости: CVE-2024-7347
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: USN-7014-1 fixed a vulnerability in nginx. This update provides the corresponding updates for Ubuntu 16.04 LTS and Ubuntu 18.04 LTS.  Original advisor...
+ 4.6. K10438187: BIG-IP iControl REST vulnerability CVE-2024-41723
+   ▪ CVE уязвимости: CVE-2024-41723
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: Security Advisory Description  Undisclosed requests to BIG-IP iControl REST can lead to an information leak of user account names. ([CVE-2024-41723](<...
+ 4.7. CVE-2022-41742
+   ▪ CVE уязвимости: CVE-2022-41742
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: NGINX Open Source before versions 1.23.2 and 1.22.1, NGINX Open Source Subscription before versions R2 P1 and R1 P1, and NGINX Plus before versions R2...
+ 4.8. CVE-2022-41741
+   ▪ CVE уязвимости: CVE-2022-41741
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: NGINX Open Source before versions 1.23.2 and 1.22.1, NGINX Open Source Subscription before versions R2 P1 and R1 P1, and NGINX Plus before versions R2...
+ 4.9. K19026212 : Apache Log4j2 Remote Code Execution vulnerability CVE-2021-44228
+   ▪ CVE уязвимости: CVE-2021-44228
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: Security Advisory Description  Apache Log4j2 2.0-beta9 through 2.15.0 (excluding security releases 2.12.2, 2.12.3, and 2.3.1) JNDI features used in co...
+ 4.10. K32171392 : Apache Log4j2 vulnerability CVE-2021-45046
+   ▪ CVE уязвимости: CVE-2021-44228, CVE-2021-45046
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: Security Advisory Description  It was found that the fix to address CVE-2021-44228 in Apache Log4j 2.15.0 was incomplete in certain non-default config...
+ 4.11. CVE-2021-23017
+   ▪ CVE уязвимости: CVE-2021-23017
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: A security issue in nginx resolver was identified, which might allow an attacker who is able to forge UDP packets from the DNS server to cause 1-byte ...
+ 4.12. CVE-2021-3618
+   ▪ CVE уязвимости: CVE-2021-3618
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: ALPACA is an application layer protocol content confusion attack, exploiting TLS servers implementing different protocols but using compatible certifi...
+ 4.13. CVE-2018-16845
+   ▪ CVE уязвимости: CVE-2018-16845
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: nginx before versions 1.15.6, 1.14.1 has a vulnerability in the ngx_http_mp4_module, which might allow an attacker to cause infinite loop in a worker ...
+ 4.14. CVE-2018-16844
+   ▪ CVE уязвимости: CVE-2018-16844
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: nginx before versions 1.15.6 and 1.14.1 has a vulnerability in the implementation of HTTP/2 that can allow for excessive CPU usage. This issue affects...
+ 4.15. CVE-2022-25139
+   ▪ CVE уязвимости: CVE-2022-25139
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: njs through 0.7.0, used in NGINX, was discovered to contain a heap use-after-free in njs_await_fulfilled.
+ 4.16. CVE-2021-46461
+   ▪ CVE уязвимости: CVE-2021-46461
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: njs through 0.7.0, used in NGINX, was discovered to contain an out-of-bounds array access via njs_vmcode_typeof in /src/njs_vmcode.c.
+ 4.17. CVE-2021-46462
+   ▪ CVE уязвимости: CVE-2021-46462
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: njs through 0.7.1, used in NGINX, was discovered to contain a segmentation violation via njs_object_set_prototype in /src/njs_object.c.
+ 4.18. CVE-2021-46463
+   ▪ CVE уязвимости: CVE-2021-46463
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: njs through 0.7.1, used in NGINX, was discovered to contain a control flow hijack caused by a Type Confusion vulnerability in njs_promise_perform_then...
+ 4.19. CVE-2019-9511
+   ▪ CVE уязвимости: CVE-2019-9511
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: Some HTTP/2 implementations are vulnerable to window size manipulation and stream prioritization manipulation, potentially leading to a denial of serv...
+ 4.20. CVE-2019-9513
+   ▪ CVE уязвимости: CVE-2019-9513
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: Some HTTP/2 implementations are vulnerable to resource loops, potentially leading to a denial of service. The attacker creates multiple request stream...
+ 4.21. CVE-2019-9516
+   ▪ CVE уязвимости: CVE-2019-9516
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: Some HTTP/2 implementations are vulnerable to a header leak, potentially leading to a denial of service. The attacker sends a stream of headers with a...
+ 4.22. CVE-2018-16843
+   ▪ CVE уязвимости: CVE-2018-16843
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: nginx before versions 1.15.6 and 1.14.1 has a vulnerability in the implementation of HTTP/2 that can allow for excessive memory consumption. This issu...
+ 4.23. CVE-2019-20372
+   ▪ CVE уязвимости: CVE-2019-20372
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: NGINX before 1.17.7, with certain error_page configurations, allows HTTP request smuggling, as demonstrated by the ability of an attacker to read unau...
+ 4.24. Denial Of Service (DoS)
+   ▪ CVE уязвимости: CVE-2022-41742
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: nginx is vulnerable to denial of service. The module `ngx_http_mp4_module` allows a local attacker to cause a worker process to crash, trigger a memor...
+ 4.25. Denial Of Service (DoS)
+   ▪ CVE уязвимости: CVE-2022-41741
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: nginx is vulnerable to denial of service. The vulnerability exists due to a memory corruption in `ngx_http_mp4_module` when the mp4 directive is used ...
+ 4.26. K11510688 : Spring Framework (Spring4Shell) and Spring Cloud vulnerabilities CVE-2022-22965, CVE-2022-22950, and CVE-2022-22963
+   ▪ CVE уязвимости: CVE-2022-22950, CVE-2022-22963, CVE-2022-22965
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: ### Security Advisory Description   * Spring Framework RCE (Spring4Shell): [CVE-2022-22965](<https://vulners.com/cve/CVE-2022-22965>)  A Spring MVC or...
+ 4.27. K73710094 : XSS vulnerability in undisclosed page of the NGINX Swagger UI
+   ▪ CVE уязвимости: НЕ ОБНАРУЖЕНЫ!
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: ### Security Advisory Description An issue in the swagger-ui, the third-party component bundled in the NGINX Plus packages, may expose an XSS security...
+ 4.28. K01051452 : NGINX Ingress Controller vulnerability CVE-2021-23055
+   ▪ CVE уязвимости: CVE-2021-23055
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: ### Security Advisory Description The command line restriction that controls snippet use with NGINX Ingress Controller does not apply to Ingress objec...
+ 4.29. Remote Code Execution
+   ▪ CVE уязвимости: CVE-2021-23017
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: nginx is vulnerable to remote code execution. A remote attacker who is able to provide DNS responses to a nginx server can likely achieve remote code ...
+--------------------------------------------------
+
+## Программное обеспечение: Apache HTTP Server 2.4.29 ##
+1. Уязвимости: детектировано [8]
+2. CVE: обнаружено [8]: CVE-2018-1312, CVE-2018-17189, CVE-2017-15710, CVE-2018-1301, CVE-2018-1302, CVE-2018-1303, CVE-2018-1283, CVE-2017-15715
+3. Эксплойты НЕ НАЙДЕНЫ!
+4. Детализация:
+ 4.1. CVE-2018-1312
+   ▪ CVE уязвимости: CVE-2018-1312
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: In Apache httpd 2.2.0 to 2.4.29, when generating an HTTP Digest authentication challenge, the nonce sent to prevent reply attacks was not correctly ge...
+ 4.2. CVE-2018-17189
+   ▪ CVE уязвимости: CVE-2018-17189
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: In Apache HTTP server versions 2.4.37 and prior, by sending request bodies in a slow loris way to plain resources, the h2 stream for that request unne...
+ 4.3. CVE-2017-15710
+   ▪ CVE уязвимости: CVE-2017-15710
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: In Apache httpd 2.0.23 to 2.0.65, 2.2.0 to 2.2.34, and 2.4.0 to 2.4.29, mod_authnz_ldap, if configured with AuthLDAPCharsetConfig, uses the Accept-Lan...
+ 4.4. CVE-2018-1301
+   ▪ CVE уязвимости: CVE-2018-1301
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: A specially crafted request could have crashed the Apache HTTP Server prior to version 2.4.30, due to an out of bound access after a size limit is rea...
+ 4.5. CVE-2018-1302
+   ▪ CVE уязвимости: CVE-2018-1302
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: When an HTTP/2 stream was destroyed after being handled, the Apache HTTP Server prior to version 2.4.30 could have written a NULL pointer potentially ...
+ 4.6. CVE-2018-1303
+   ▪ CVE уязвимости: CVE-2018-1303
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: A specially crafted HTTP request header could have crashed the Apache HTTP Server prior to version 2.4.30 due to an out of bound read while preparing ...
+ 4.7. CVE-2018-1283
+   ▪ CVE уязвимости: CVE-2018-1283
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: In Apache httpd 2.4.0 to 2.4.29, when mod_session is configured to forward its session data to CGI applications (SessionEnv on, not the default), a re...
+ 4.8. CVE-2017-15715
+   ▪ CVE уязвимости: CVE-2017-15715
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: In Apache httpd 2.4.0 to 2.4.29, the expression specified in <FilesMatch> could match '$' to a newline character in a malicious filename, rather than ...
+--------------------------------------------------
+
+## Программное обеспечение: DjVu Reader 2.0.0.27 ##
+1. Уязвимости НЕ НАЙДЕНЫ!
+--------------------------------------------------
+
+## Программное обеспечение: Wireshark 2.6.1 ##
+1. Уязвимости: детектировано [50]
+2. CVE: обнаружено [106]: CVE-2018-14344, CVE-2018-14341, CVE-2018-14342, CVE-2018-14340, CVE-2018-14339, CVE-2018-14369, CVE-2018-14368, CVE-2018-14343, CVE-2018-14367, CVE-2018-14370, CVE-2018-16056, CVE-2018-16057, CVE-2018-16058, CVE-2018-12086, CVE-2018-18225, CVE-2018-18226, CVE-2018-18227, CVE-2018-19622, CVE-2018-19623, CVE-2018-19624, CVE-2018-19625, CVE-2018-19626, CVE-2018-19627, CVE-2018-19628, CVE-2019-5716, CVE-2019-5717, CVE-2019-5718, CVE-2019-5719, CVE-2019-9208, CVE-2019-9209, CVE-2019-9214, CVE-2019-10894, CVE-2019-10895, CVE-2019-10896, CVE-2019-10899, CVE-2019-10901, CVE-2019-10903, CVE-2019-12295, CVE-2019-12295, CVE-2019-13619, CVE-2019-16319, CVE-2019-19553, CVE-2020-11647, CVE-2020-13164, CVE-2020-15466, CVE-2020-25862, CVE-2020-25863, CVE-2020-26418, CVE-2020-26421, CVE-2020-26575, CVE-2020-28030, CVE-2020-7045, CVE-2020-9428, CVE-2020-9430, CVE-2020-9431, CVE-2021-22191, CVE-2021-4181, CVE-2021-4184, CVE-2021-4185, CVE-2022-0581, CVE-2022-0582, CVE-2022-0583, CVE-2022-0585, CVE-2022-0586, CVE-2021-22207, CVE-2021-22235, CVE-2021-39921, CVE-2021-39922, CVE-2021-39923, CVE-2021-39924, CVE-2021-39925, CVE-2021-39928, CVE-2021-39929, CVE-2018-18226, CVE-2019-5716, CVE-2018-18225, CVE-2018-19628, CVE-2018-14367, CVE-2018-14370, CVE-2018-18227, CVE-2019-16319, CVE-2018-19626, CVE-2018-19627, CVE-2018-19622, CVE-2018-19624, CVE-2019-5718, CVE-2019-5717, CVE-2019-9214, CVE-2018-19625, CVE-2018-19623, CVE-2019-9208, CVE-2019-5719, CVE-2019-9209, CVE-2020-9430, CVE-2019-10901, CVE-2019-10896, CVE-2019-10895, CVE-2019-10894, CVE-2019-10903, CVE-2020-9431, CVE-2019-10899, CVE-2019-19553, CVE-2020-9428, CVE-2018-14339, CVE-2018-14341, CVE-2018-14344
+3. Эксплойты НЕ НАЙДЕНЫ!
+4. Детализация:
+ 4.1. CVE-2018-14344
+   ▪ CVE уязвимости: CVE-2018-14344
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: In Wireshark 2.6.0 to 2.6.1, 2.4.0 to 2.4.7, and 2.2.0 to 2.2.15, the ISMP dissector could crash. This was addressed in epan/dissectors/packet-ismp.c ...
+ 4.2. CVE-2018-14341
+   ▪ CVE уязвимости: CVE-2018-14341
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: In Wireshark 2.6.0 to 2.6.1, 2.4.0 to 2.4.7, and 2.2.0 to 2.2.15, the DICOM dissector could go into a large or infinite loop. This was addressed in ep...
+ 4.3. CVE-2018-14342
+   ▪ CVE уязвимости: CVE-2018-14342
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: In Wireshark 2.6.0 to 2.6.1, 2.4.0 to 2.4.7, and 2.2.0 to 2.2.15, the BGP protocol dissector could go into a large loop. This was addressed in epan/di...
+ 4.4. CVE-2018-14340
+   ▪ CVE уязвимости: CVE-2018-14340
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: In Wireshark 2.6.0 to 2.6.1, 2.4.0 to 2.4.7, and 2.2.0 to 2.2.15, dissectors that support zlib decompression could crash. This was addressed in epan/t...
+ 4.5. CVE-2018-14339
+   ▪ CVE уязвимости: CVE-2018-14339
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: In Wireshark 2.6.0 to 2.6.1, 2.4.0 to 2.4.7, and 2.2.0 to 2.2.15, the MMSE dissector could go into an infinite loop. This was addressed in epan/proto....
+ 4.6. CVE-2018-14369
+   ▪ CVE уязвимости: CVE-2018-14369
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: In Wireshark 2.6.0 to 2.6.1, 2.4.0 to 2.4.7, and 2.2.0 to 2.2.15, the HTTP2 dissector could crash. This was addressed in epan/dissectors/packet-http2....
+ 4.7. CVE-2018-14368
+   ▪ CVE уязвимости: CVE-2018-14368
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: In Wireshark 2.6.0 to 2.6.1, 2.4.0 to 2.4.7, and 2.2.0 to 2.2.15, the Bazaar protocol dissector could go into an infinite loop. This was addressed in ...
+ 4.8. CVE-2018-14343
+   ▪ CVE уязвимости: CVE-2018-14343
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: In Wireshark 2.6.0 to 2.6.1, 2.4.0 to 2.4.7, and 2.2.0 to 2.2.15, the ASN.1 BER dissector could crash. This was addressed in epan/dissectors/packet-be...
+ 4.9. CVE-2018-14367
+   ▪ CVE уязвимости: CVE-2018-14367
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: In Wireshark 2.6.0 to 2.6.1 and 2.4.0 to 2.4.7, the CoAP protocol dissector could crash. This was addressed in epan/dissectors/packet-coap.c by proper...
+ 4.10. CVE-2018-14370
+   ▪ CVE уязвимости: CVE-2018-14370
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: In Wireshark 2.6.0 to 2.6.1 and 2.4.0 to 2.4.7, the IEEE 802.11 protocol dissector could crash. This was addressed in epan/crypt/airpdcap.c via bounds...
+ 4.11. wireshark - security update
+   ▪ CVE уязвимости: CVE-2018-16056, CVE-2018-16057, CVE-2018-16058
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: Bulletin has no description
+ 4.12. wireshark - security update
+   ▪ CVE уязвимости: CVE-2018-12086, CVE-2018-18225, CVE-2018-18226, CVE-2018-18227, CVE-2018-19622, CVE-2018-19623, CVE-2018-19624, CVE-2018-19625, CVE-2018-19626, CVE-2018-19627, CVE-2018-19628
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: Bulletin has no description
+ 4.13. wireshark - security update
+   ▪ CVE уязвимости: CVE-2019-5716, CVE-2019-5717, CVE-2019-5718, CVE-2019-5719, CVE-2019-9208, CVE-2019-9209, CVE-2019-9214
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: Bulletin has no description
+ 4.14. wireshark - security update
+   ▪ CVE уязвимости: CVE-2019-10894, CVE-2019-10895, CVE-2019-10896, CVE-2019-10899, CVE-2019-10901, CVE-2019-10903, CVE-2019-12295
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: Bulletin has no description
+ 4.15. wireshark - security update
+   ▪ CVE уязвимости: CVE-2019-12295, CVE-2019-13619, CVE-2019-16319, CVE-2019-19553, CVE-2020-11647, CVE-2020-13164, CVE-2020-15466, CVE-2020-25862, CVE-2020-25863, CVE-2020-26418, CVE-2020-26421, CVE-2020-26575, CVE-2020-28030, CVE-2020-7045, CVE-2020-9428, CVE-2020-9430, CVE-2020-9431
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: Bulletin has no description
+ 4.16. wireshark - security update
+   ▪ CVE уязвимости: CVE-2021-22191, CVE-2021-4181, CVE-2021-4184, CVE-2021-4185, CVE-2022-0581, CVE-2022-0582, CVE-2022-0583, CVE-2022-0585, CVE-2022-0586
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: Bulletin has no description
+ 4.17. wireshark - security update
+   ▪ CVE уязвимости: CVE-2021-22207, CVE-2021-22235, CVE-2021-39921, CVE-2021-39922, CVE-2021-39923, CVE-2021-39924, CVE-2021-39925, CVE-2021-39928, CVE-2021-39929
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: Bulletin has no description
+ 4.18. CVE-2018-18226
+   ▪ CVE уязвимости: CVE-2018-18226
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: In Wireshark 2.6.0 to 2.6.3, the Steam IHS Discovery dissector could consume system memory. This was addressed in epan/dissectors/packet-steam-ihs-dis...
+ 4.19. CVE-2019-5716
+   ▪ CVE уязвимости: CVE-2019-5716
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: In Wireshark 2.6.0 to 2.6.5, the 6LoWPAN dissector could crash. This was addressed in epan/dissectors/packet-6lowpan.c by avoiding use of a TVB before...
+ 4.20. CVE-2018-18225
+   ▪ CVE уязвимости: CVE-2018-18225
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: In Wireshark 2.6.0 to 2.6.3, the CoAP dissector could crash. This was addressed in epan/dissectors/packet-coap.c by ensuring that the piv length is co...
+ 4.21. CVE-2018-19628
+   ▪ CVE уязвимости: CVE-2018-19628
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: In Wireshark 2.6.0 to 2.6.4, the ZigBee ZCL dissector could crash. This was addressed in epan/dissectors/packet-zbee-zcl-lighting.c by preventing a di...
+ 4.22. CVE-2018-14367
+   ▪ CVE уязвимости: CVE-2018-14367
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: In Wireshark 2.6.0 to 2.6.1 and 2.4.0 to 2.4.7, the CoAP protocol dissector could crash. This was addressed in epan/dissectors/packet-coap.c by proper...
+ 4.23. CVE-2018-14370
+   ▪ CVE уязвимости: CVE-2018-14370
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: In Wireshark 2.6.0 to 2.6.1 and 2.4.0 to 2.4.7, the IEEE 802.11 protocol dissector could crash. This was addressed in epan/crypt/airpdcap.c via bounds...
+ 4.24. CVE-2018-18227
+   ▪ CVE уязвимости: CVE-2018-18227
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: In Wireshark 2.6.0 to 2.6.3 and 2.4.0 to 2.4.9, the MS-WSP protocol dissector could crash. This was addressed in epan/dissectors/packet-mswsp.c by pro...
+ 4.25. CVE-2019-16319
+   ▪ CVE уязвимости: CVE-2019-16319
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: In Wireshark 3.0.0 to 3.0.3 and 2.6.0 to 2.6.10, the Gryphon dissector could go into an infinite loop. This was addressed in plugins/epan/gryphon/pack...
+ 4.26. CVE-2018-19626
+   ▪ CVE уязвимости: CVE-2018-19626
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: In Wireshark 2.6.0 to 2.6.4 and 2.4.0 to 2.4.10, the DCOM dissector could crash. This was addressed in epan/dissectors/packet-dcom.c by adding '\0' te...
+ 4.27. CVE-2018-19627
+   ▪ CVE уязвимости: CVE-2018-19627
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: In Wireshark 2.6.0 to 2.6.4 and 2.4.0 to 2.4.10, the IxVeriWave file parser could crash. This was addressed in wiretap/vwr.c by adjusting a buffer bou...
+ 4.28. CVE-2018-19622
+   ▪ CVE уязвимости: CVE-2018-19622
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: In Wireshark 2.6.0 to 2.6.4 and 2.4.0 to 2.4.10, the MMSE dissector could go into an infinite loop. This was addressed in epan/dissectors/packet-mmse....
+ 4.29. CVE-2018-19624
+   ▪ CVE уязвимости: CVE-2018-19624
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: In Wireshark 2.6.0 to 2.6.4 and 2.4.0 to 2.4.10, the PVFS dissector could crash. This was addressed in epan/dissectors/packet-pvfs2.c by preventing a ...
+ 4.30. CVE-2019-5718
+   ▪ CVE уязвимости: CVE-2019-5718
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: In Wireshark 2.6.0 to 2.6.5 and 2.4.0 to 2.4.11, the RTSE dissector and other ASN.1 dissectors could crash. This was addressed in epan/charsets.c by a...
+ 4.31. CVE-2019-5717
+   ▪ CVE уязвимости: CVE-2019-5717
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: In Wireshark 2.6.0 to 2.6.5 and 2.4.0 to 2.4.11, the P_MUL dissector could crash. This was addressed in epan/dissectors/packet-p_mul.c by rejecting th...
+ 4.32. CVE-2019-9214
+   ▪ CVE уязвимости: CVE-2019-9214
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: In Wireshark 2.4.0 to 2.4.12 and 2.6.0 to 2.6.6, the RPCAP dissector could crash. This was addressed in epan/dissectors/packet-rpcap.c by avoiding an ...
+ 4.33. CVE-2018-19625
+   ▪ CVE уязвимости: CVE-2018-19625
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: In Wireshark 2.6.0 to 2.6.4 and 2.4.0 to 2.4.10, the dissection engine could crash. This was addressed in epan/tvbuff_composite.c by preventing a heap...
+ 4.34. CVE-2018-19623
+   ▪ CVE уязвимости: CVE-2018-19623
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: In Wireshark 2.6.0 to 2.6.4 and 2.4.0 to 2.4.10, the LBMPDM dissector could crash. In addition, a remote attacker could write arbitrary data to any me...
+ 4.35. CVE-2019-9208
+   ▪ CVE уязвимости: CVE-2019-9208
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: In Wireshark 2.4.0 to 2.4.12 and 2.6.0 to 2.6.6, the TCAP dissector could crash. This was addressed in epan/dissectors/asn1/tcap/tcap.cnf by avoiding ...
+ 4.36. CVE-2019-5719
+   ▪ CVE уязвимости: CVE-2019-5719
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: In Wireshark 2.6.0 to 2.6.5 and 2.4.0 to 2.4.11, the ISAKMP dissector could crash. This was addressed in epan/dissectors/packet-isakmp.c by properly h...
+ 4.37. CVE-2019-9209
+   ▪ CVE уязвимости: CVE-2019-9209
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: In Wireshark 2.4.0 to 2.4.12 and 2.6.0 to 2.6.6, the ASN.1 BER and related dissectors could crash. This was addressed in epan/dissectors/packet-ber.c ...
+ 4.38. CVE-2020-9430
+   ▪ CVE уязвимости: CVE-2020-9430
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: In Wireshark 3.2.0 to 3.2.1, 3.0.0 to 3.0.8, and 2.6.0 to 2.6.14, the WiMax DLMAP dissector could crash. This was addressed in plugins/epan/wimax/msg_...
+ 4.39. CVE-2019-10901
+   ▪ CVE уязвимости: CVE-2019-10901
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: In Wireshark 2.4.0 to 2.4.13, 2.6.0 to 2.6.7, and 3.0.0, the LDSS dissector could crash. This was addressed in epan/dissectors/packet-ldss.c by handli...
+ 4.40. CVE-2019-10896
+   ▪ CVE уязвимости: CVE-2019-10896
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: In Wireshark 2.4.0 to 2.4.13, 2.6.0 to 2.6.7, and 3.0.0, the DOF dissector could crash. This was addressed in epan/dissectors/packet-dof.c by properly...
+ 4.41. CVE-2019-10895
+   ▪ CVE уязвимости: CVE-2019-10895
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: In Wireshark 2.4.0 to 2.4.13, 2.6.0 to 2.6.7, and 3.0.0, the NetScaler file parser could crash. This was addressed in wiretap/netscaler.c by improving...
+ 4.42. CVE-2019-10894
+   ▪ CVE уязвимости: CVE-2019-10894
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: In Wireshark 2.4.0 to 2.4.13, 2.6.0 to 2.6.7, and 3.0.0, the GSS-API dissector could crash. This was addressed in epan/dissectors/packet-gssapi.c by e...
+ 4.43. CVE-2019-10903
+   ▪ CVE уязвимости: CVE-2019-10903
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: In Wireshark 2.4.0 to 2.4.13, 2.6.0 to 2.6.7, and 3.0.0, the DCERPC SPOOLSS dissector could crash. This was addressed in epan/dissectors/packet-dcerpc...
+ 4.44. CVE-2020-9431
+   ▪ CVE уязвимости: CVE-2020-9431
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: In Wireshark 3.2.0 to 3.2.1, 3.0.0 to 3.0.8, and 2.6.0 to 2.6.14, the LTE RRC dissector could leak memory. This was addressed in epan/dissectors/packe...
+ 4.45. CVE-2019-10899
+   ▪ CVE уязвимости: CVE-2019-10899
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: In Wireshark 2.4.0 to 2.4.13, 2.6.0 to 2.6.7, and 3.0.0, the SRVLOC dissector could crash. This was addressed in epan/dissectors/packet-srvloc.c by pr...
+ 4.46. CVE-2019-19553
+   ▪ CVE уязвимости: CVE-2019-19553
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: In Wireshark 3.0.0 to 3.0.6 and 2.6.0 to 2.6.12, the CMS dissector could crash. This was addressed in epan/dissectors/asn1/cms/packet-cms-template.c b...
+ 4.47. CVE-2020-9428
+   ▪ CVE уязвимости: CVE-2020-9428
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: In Wireshark 3.2.0 to 3.2.1, 3.0.0 to 3.0.8, and 2.6.0 to 2.6.14, the EAP dissector could crash. This was addressed in epan/dissectors/packet-eap.c by...
+ 4.48. CVE-2018-14339
+   ▪ CVE уязвимости: CVE-2018-14339
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: In Wireshark 2.6.0 to 2.6.1, 2.4.0 to 2.4.7, and 2.2.0 to 2.2.15, the MMSE dissector could go into an infinite loop. This was addressed in epan/proto....
+ 4.49. CVE-2018-14341
+   ▪ CVE уязвимости: CVE-2018-14341
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: In Wireshark 2.6.0 to 2.6.1, 2.4.0 to 2.4.7, and 2.2.0 to 2.2.15, the DICOM dissector could go into a large or infinite loop. This was addressed in ep...
+ 4.50. CVE-2018-14344
+   ▪ CVE уязвимости: CVE-2018-14344
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: In Wireshark 2.6.0 to 2.6.1, 2.4.0 to 2.4.7, and 2.2.0 to 2.2.15, the ISMP dissector could crash. This was addressed in epan/dissectors/packet-ismp.c ...
+--------------------------------------------------
+
+## Программное обеспечение: Notepad++ 7.5.6 ##
+1. Уязвимости: детектировано [9]
+2. CVE: обнаружено [9]: CVE-2022-32168, CVE-2023-6401, CVE-2023-40164, CVE-2023-40031, CVE-2022-31901, CVE-2022-31902, CVE-2023-40166, CVE-2023-40036, CVE-2019-16294
+3. Эксплойты НЕ НАЙДЕНЫ!
+4. Детализация:
+ 4.1. CVE-2022-32168
+   ▪ CVE уязвимости: CVE-2022-32168
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: Notepad++ versions 8.4.1 and before are vulnerable to DLL hijacking where an attacker can replace the vulnerable dll (UxTheme.dll) with his own dll an...
+ 4.2. CVE-2023-6401
+   ▪ CVE уязвимости: CVE-2023-6401
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: A vulnerability classified as problematic was found in NotePad++ up to 8.1. Affected by this vulnerability is an unknown functionality of the file dbg...
+ 4.3. CVE-2023-40164
+   ▪ CVE уязвимости: CVE-2023-40164
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: Notepad++ is a free and open-source source code editor. Versions 8.5.6 and prior are vulnerable to global buffer read overflow in `nsCodingStateMachin...
+ 4.4. CVE-2023-40031
+   ▪ CVE уязвимости: CVE-2023-40031
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: Notepad++ is a free and open-source source code editor. Versions 8.5.6 and prior are vulnerable to heap buffer write overflow in `Utf8_16_Read::conver...
+ 4.5. CVE-2022-31901
+   ▪ CVE уязвимости: CVE-2022-31901
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: Buffer overflow in function Notepad_plus::addHotSpot in Notepad++ v8.4.3 and earlier allows attackers to crash the application via two crafted files.
+ 4.6. CVE-2022-31902
+   ▪ CVE уязвимости: CVE-2022-31902
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: Notepad++ v8.4.1 was discovered to contain a stack overflow via the component Finder::add().
+ 4.7. CVE-2023-40166
+   ▪ CVE уязвимости: CVE-2023-40166
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: Notepad++ is a free and open-source source code editor. Versions 8.5.6 and prior are vulnerable to heap buffer read overflow in `FileManager::detectLa...
+ 4.8. CVE-2023-40036
+   ▪ CVE уязвимости: CVE-2023-40036
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: Notepad++ is a free and open-source source code editor. Versions 8.5.6 and prior are vulnerable to global buffer read overflow in `CharDistributionAna...
+ 4.9. CVE-2019-16294
+   ▪ CVE уязвимости: CVE-2019-16294
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: SciLexer.dll in Scintilla in Notepad++ (x64) before 7.7 allows remote code execution or denial of service via Unicode characters in a crafted .ml file...
+--------------------------------------------------
+
+## Программное обеспечение: Google Chrome 68.0.3440.106 ##
+1. Уязвимости НЕ НАЙДЕНЫ!
+--------------------------------------------------
+
+## Программное обеспечение: Mozilla Firefox 61.0.1 ##
+1. Уязвимости: детектировано [6]
+2. CVE: обнаружено [6]: CVE-2018-12361, CVE-2018-12368, CVE-2018-12371, CVE-2018-12369, CVE-2018-12358, CVE-2018-5186
+3. Эксплойты НЕ НАЙДЕНЫ!
+4. Детализация:
+ 4.1. CVE-2018-12361
+   ▪ CVE уязвимости: CVE-2018-12361
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: An integer overflow can occur in the SwizzleData code while calculating buffer sizes. The overflowed value is used for subsequent graphics computation...
+ 4.2. CVE-2018-12368
+   ▪ CVE уязвимости: CVE-2018-12368
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: Windows 10 does not warn users before opening executable files with the SettingContent-ms extension even when they have been downloaded from the inter...
+ 4.3. CVE-2018-12371
+   ▪ CVE уязвимости: CVE-2018-12371
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: An integer overflow vulnerability in the Skia library when allocating memory for edge builders on some systems with at least 16 GB of RAM. This result...
+ 4.4. CVE-2018-12369
+   ▪ CVE уязвимости: CVE-2018-12369
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: WebExtensions bundled with embedded experiments were not correctly checked for proper authorization. This allowed a malicious WebExtension to gain ful...
+ 4.5. CVE-2018-12358
+   ▪ CVE уязвимости: CVE-2018-12358
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: Service workers can use redirection to avoid the tainting of cross-origin resources in some instances, allowing a malicious site to read responses whi...
+ 4.6. CVE-2018-5186
+   ▪ CVE уязвимости: CVE-2018-5186
+   ▪ Эксплойт: ☒ отсутствует
+   ▪ Описание: Memory safety bugs present in Firefox 60. Some of these bugs showed evidence of memory corruption and we presume that with enough effort that some of ...
+--------------------------------------------------
+

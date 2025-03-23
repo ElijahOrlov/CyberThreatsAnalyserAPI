@@ -1,0 +1,49 @@
+Отчет анализа файла на наличие киберугроз
+-----------------------------------------
+
+Файл: protected_archive.zip
+Analyses ID: NjEyYjU3ZTJhZmU3MDY1ZWJlOTIxMzM3MTcwZGY3ZDQ6MTc0MjIzOTg5NQ==
+File ID: f4dc2e1abf2de55b455c7dfc0bbe66a9d12f7e857cd12f8408dadd7129946ae3
+
+Антивирусы обнаружившие уязвимости (20):
+Arcabit, CTX, ClamAV, DrWeb, ESET-NOD32, Emsisoft, FireEye, Fortinet, GData, Google, Ikarus, Kaspersky, Kingsoft, MicroWorld-eScan, Microsoft, Sangfor, Symantec, VIPRE, ViRobot, alibabacloud
+
+Проверка целевых антивирусов:
+  ▪ Fortinet:  🗸 обнаружено
+  ▪ McAfee:  ☓ не обнаружено
+  ▪ Yandex:  ☓ не обнаружено
+  ▪ Sophos:  ☓ не обнаружено
+
+Обнаруженные угрозы (17):
+  ▪ [Detected]: Google
+  ▪ [HTML.Z.Agent.48950]: ViRobot
+  ▪ [Trojan-Dropper.VBA.Agent]: Ikarus
+  ▪ [Trojan.Gen.MBT]: Symantec
+  ▪ [Trojan.Generic-Macro.Save.ec3db0ab]: Sangfor
+  ▪ [Trojan.Generic.37575014]: FireEye, GData, MicroWorld-eScan, VIPRE
+  ▪ [Trojan.Generic.37575014 (B)]: Emsisoft
+  ▪ [Trojan.Generic.D23D5966]: Arcabit
+  ▪ [Trojan:O97M/Obfuse.CP]: Microsoft
+  ▪ [Trojan[dropper]:MSOffice/Obfuse.CX]: alibabacloud
+  ▪ [UDS:DangerousObject.Multi.Generic]: Kaspersky
+  ▪ [VBA/Agent.BCF0!tr]: Fortinet
+  ▪ [VBA/TrojanDropper.Agent.AXB]: ESET-NOD32
+  ▪ [Win32.Infected.AutoInfector.a]: Kingsoft
+  ▪ [X97M.DownLoader.459]: DrWeb
+  ▪ [Xls.Dropper.Agent-7398287-0]: ClamAV
+  ▪ [txt.trojan.obfuse]: CTX
+
+Домены (2):
+  ▪ fp2e7a.wpc.2be4.phicdn.net
+  ▪ fp2e7a.wpc.phicdn.net
+
+IP адреса (1):
+  ▪ 192.229.211.108
+
+MITRE Attack Techniques (6):
+  ▪ [T1010]: Sample monitors Window changes (e.g. starting applications), analyze the sample with the simulation cookbook
+  ▪ [T1057]: Queries a list of all running processes
+  ▪ [T1071]: Adversaries may communicate using application layer protocols to avoid detection/network filtering by blending in with existing traffic.
+  ▪ [T1082]: Queries the volume information (name, serial number etc) of a device
+  ▪ [T1083]: Reads ini files
+  ▪ [T1497]: Contains long sleeps (>= 3 min)
