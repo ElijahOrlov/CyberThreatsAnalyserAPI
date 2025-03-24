@@ -45,7 +45,7 @@ class BaseAPI:
     Базовый класс формирования строки поиска к сервису Vulners API
     https://vulners.com/docs/api_reference/api/
     """
-    _BASE_URL_PART = "https://vulners.com/api/v3"
+    _BASE_URL_PART = "https://vulners.com/api/v4"
     _SERVICE_URL_PART = ""
 
     def __init__(self, api_key: str):
@@ -81,14 +81,25 @@ class BaseAPI:
         }
 
     @staticmethod
-    def data(query: str, fields: list[str] = None, size: int = 50) -> dict[str, str]:
+    def software(product: str, version: str | Version = None) -> dict:
         """
-        Search query by Lucene syntax
+        Search query by software
+        :param product: наименование ПО
+        :param version: версия ПО
         """
-        data = {
-            "query": query,  # Поисковый запрос
-            "size": size  # Максимальное количество возвращаемых результатов
+        software = {
+            "product": product
         }
+        if version: software["version"] = str(version)
+        return software
+
+    def data(self, software: list[dict] = None, fields: list[str] = None, size: int = 50) -> dict[str, Any]:
+        """
+        Search query
+        """
+        data: dict[str, Any] = self.headers
+        if size: data["size"] = size  # Максимальное количество возвращаемых результатов
+        if software: data["software"] = software  # Информация по ПО (продукт и версия)
         if fields: data["fields"] = fields  # поля для получения из запроса
         return data
 
@@ -97,18 +108,14 @@ class SearchAPI(BaseAPI):
     Класс формирования строки запроса (на языке Lucene) к VirusTotal для загрузки и анализа файла
     https://docs.virustotal.com/reference/file
     """
-    _SERVICE_URL_PART = 'search/lucene/'
+    _SERVICE_URL_PART = 'audit/software'
 
     _PROGRAM_ASSOCIATIONS = {
         "LibreOffice": ("LibreOffice","6.0.5"),
         "7zip": ("7-Zip","18.03"),
         "Adobe Reader": ("Adobe Acrobat Reader","18.009.20050"),
-        "nginx": ("nginx",""),
         "Apache HTTP Server": ("apache http server",""),
         "DjVu Reader": ("DjVu",""),
-        "Wireshark": ("Wireshark",""),
-        "Notepad++": ("Notepad++",""),
-        "Google Chrome": ("Google Chrome",""),
         "Mozilla Firefox": ("Mozilla Firefox","61.0")
     }
 
@@ -120,7 +127,7 @@ class SearchAPI(BaseAPI):
         super().__init__(api_key)
 
     @classmethod
-    def normalize_program(cls, program: str, version: str | Version) -> tuple[str,str]:
+    def normalized_program(cls, program: str, version: str | Version) -> tuple[str,str]:
         """
         Нормализация наименования ПО к формату Vulners,
         Нормализация версии с учетом семантического анализа версии
@@ -135,7 +142,7 @@ class SearchAPI(BaseAPI):
         return norm_program, version
 
     @classmethod
-    def normalize_version(cls, program: str, version: str | Version) -> str | Version:
+    def normalized_version(cls, program: str, version: str | Version) -> str | Version:
         """
         Нормализация версии с учетом семантического анализа версии
         :param program: ненормализованное наименование ПО
@@ -167,16 +174,17 @@ class SearchAPI(BaseAPI):
 
             try:
                 # нормализуем наименование программы и ее версию
-                norm_program, program_version = self.normalize_program(program_name, program_version)
-                norm_version = self.normalize_version(program_name, program_version)
+                norm_program, program_version = self.normalized_program(program_name, program_version)
+                norm_version = self.normalized_version(program_name, program_version)
 
                 # Формируем поисковый запрос в синтаксисе Lucene
-                query = f'affectedSoftware.name:"{norm_program}" AND (affectedSoftware.version:"{norm_version}" OR affectedSoftware.version:"{program_version}")'
-                fields = ["id", "title", "cvelist", "exploit", "type", "description"]
+                # query = f'affectedSoftware.name:"{norm_program}" AND (affectedSoftware.version:"{norm_version}" OR affectedSoftware.version:"{program_version}")'
+                software = self.software(norm_program, norm_version)
+                fields = ["title", "cvelist", "exploitation", "short_description"]
                 # Формируем параметры запроса к API
-                data = self.data(query, fields)
+                data = self.data(software=[software], fields=fields)
 
-                response = post(self.url, headers=self.headers, json=data)
+                response = post(self.url, json=data)
                 response.raise_for_status()
             except exceptions.HTTPError as http_err:
                 raise Exception(f"HTTP ошибка: {http_err}")
@@ -184,11 +192,12 @@ class SearchAPI(BaseAPI):
                 raise Exception(f"Ошибка запроса: {err}")
 
             if response.status_code == HTTPStatus.OK:
-                search_result = response.json()
-                result_data: dict[str,Any] = search_result.get("data", {})
-                if search_result.get("result") == "error":
+                result = response.json()
+                if result.get("result", "") == "error":
+                    result_data = result["data", {}]
                     raise Exception(f"Ошибка в ответе: [errorCode: {result_data.get("errorCode")}] {result_data.get("error")}")
-                vulnerabilities = [vulnerability.get("_source", {}) for vulnerability in result_data.get("search", [])]
+                result_data: dict[str, Any] = next(iter(result.get("result", [])), None)
+                vulnerabilities: list[dict] = result_data.get("vulnerabilities", [])
                 return vulnerabilities
             else:
                 raise Exception(f"Ошибка выполнения поиска уязвимостей ПО: [statusCode: {response.status_code}] {response.text}")
@@ -197,10 +206,11 @@ class SearchAPI(BaseAPI):
             return None
 
 
-def generate_program_summary(vulnerability_data: dict[str, Any]) -> list[str] | None:
+def generate_program_summary(vulnerability_data: dict[str, Any], add_detalisation: bool = False) -> list[str] | None:
     """
     Генерация отчета по результатам анализа найденных уязвимостей в программном обеспечении
     :param vulnerability_data: найденные уязвимости в ПО из базы данных Vulners (program, version, cve_list, exploit_list, vulnerabilities)
+    :param add_detalisation: добавить в отчет подробный вывод по уязвимостям
     :return: Сводный отчет по программе
     """
     operation = ProgramOperationCode.PROGRAM_SUMMARY
@@ -210,8 +220,8 @@ def generate_program_summary(vulnerability_data: dict[str, Any]) -> list[str] | 
 
         program = vulnerability_data.get("program", "")
         version = vulnerability_data.get("version", "")
-        cve_list = vulnerability_data.get("cve_list", [])
-        exploit_list = vulnerability_data.get("exploit_list", [])
+        cve_list = vulnerability_data.get("cve_list", {})
+        exploit_list = vulnerability_data.get("exploit_list", {})
         vulnerabilities = vulnerability_data.get("vulnerabilities", [])
 
         report = [f"## Программное обеспечение: {program} {version} ##"]
@@ -220,29 +230,36 @@ def generate_program_summary(vulnerability_data: dict[str, Any]) -> list[str] | 
             report.append(f"{counter}. Уязвимости: детектировано [{len(vulnerabilities)}]")
             counter += 1
             if cve_list and len(cve_list) > 0:
-                report.append(f"{counter}. CVE: обнаружено [{len(cve_list)}]: {', '.join(cve_list)}")
+                report.append(f"{counter}. CVE: обнаружено [{len(cve_list)}]: {', '.join(sorted(cve_list))}")
             else:
                 report.append(f"{counter}. CVE НЕ ОБНАРУЖЕНО!")
             counter += 1
             if exploit_list and len(exploit_list) > 0:
-                report.append(f"{counter}. Эксплойты: найдено [{len(exploit_list)}]: {', '.join(cve_list)}")
+                report.append(f"{counter}. Эксплойты: найдено [{len(exploit_list)}]: {', '.join(sorted(exploit_list))}")
             else:
                 report.append(f"{counter}. Эксплойты НЕ НАЙДЕНЫ!")
-            counter += 1
-            report.append(f"{counter}. Детализация:")
-            for pos, vulnerability in enumerate(vulnerabilities):
-                num = pos + 1
-                title = vulnerability.get("title")
-                report.append(f" {counter}.{num}. {title}")
+            if add_detalisation:
+                counter += 1
+                report.append(f"{counter}. Детализация:")
+                for pos, vulnerability in enumerate(vulnerabilities):
+                    num = pos + 1
+                    title = vulnerability.get("title")
+                    report.append(f" {counter}.{num}. {title}")
 
-                cve = vulnerability.get("cvelist", [])
-                report.append(f"   {u'\u25AA'} CVE уязвимости: {(', '.join(cve) if (cve and len(cve) > 0) else 'НЕ ОБНАРУЖЕНЫ!')}")
+                    vuln_cve = vulnerability.get("cvelist", [])
+                    vuln_cve_available = (vuln_cve and len(vuln_cve) > 0)
+                    report.append(f"   {u'\u25AA'} CVE уязвимости: {(', '.join(sorted(vuln_cve)) if vuln_cve_available else 'НЕ ОБНАРУЖЕНЫ!')}")
 
-                exploit_available = any(vulnerability.get("exploit", {}).values())
-                report.append(f"   {u'\u25AA'} Эксплойт: {('☑ доступен' if exploit_available else '☒ отсутствует')}")
+                    vuln_exploitation = vulnerability.get("exploitation", {})
+                    vuln_exploitation_available = (vuln_exploitation and vuln_exploitation.get("wildExploited", False) and vuln_exploitation.get("wildExploitedSources", []))
+                    vuln_exploitations = set()
+                    if vuln_exploitation_available:
+                        for exploited_source in vuln_exploitation.get("wildExploitedSources", []):
+                            vuln_exploitations = vuln_exploitations.union(exploited_source.get("idList", []))
+                    report.append(f"   {u'\u25AA'} Эксплойты: {(', '.join(sorted(vuln_exploitations)) if vuln_exploitation_available else 'ОТСУТСТВУЮТ!')}")
 
-                description = vulnerability.get("description").replace('\n'," ")
-                report.append(f"   {u'\u25AA'} Описание: {description[:150]}{'...' if len(description) > 150 else ''}")
+                    description = vulnerability.get("short_description").replace('\n'," ")
+                    report.append(f"   {u'\u25AA'} Описание: {description[:200]}{'...' if len(description) > 200 else ''}")
         else:
             report.append(f"{counter}. Уязвимости НЕ НАЙДЕНЫ!")
         report.append("-" * 50)
@@ -252,13 +269,12 @@ def generate_program_summary(vulnerability_data: dict[str, Any]) -> list[str] | 
         print(f"[☓] {ex}")
         return None
 
-def analyze_software(api_key: str, software_list: list[dict[str, str]], logger: Logger = None) -> list[dict[str,Any]] | None:
+def analyze_software(api_key: str, software_list: list[dict[str, str]], add_detalisation: bool = False, logger: Logger = None) -> list[dict[str,Any]] | None:
     """
     Сбор данных по результатам анализа найденных уязвимостей в программном обеспечении
-    {'analyses_id', str} - идентификатор анализа архива
-
     :param api_key: ключ авторизации
     :param software_list: список ПО для анализа на уязвимости
+    :param add_detalisation: добавить в отчет подробный вывод по уязвимостям
     :param logger: логгер операций
     :return: справочник с результатом анализа (program, version, summary)
     """
@@ -279,7 +295,7 @@ def analyze_software(api_key: str, software_list: list[dict[str, str]], logger: 
         search_api = SearchAPI(api_key)
         for software in software_list:
             program = software["Program"]
-            version = software["Version"]
+            _, version = search_api.normalized_program(program, software["Version"])
             print(f"{logger.counter}. Анализ [{program} {version}]")
 
             # ищем уязвимости в программном обеспечении
@@ -290,16 +306,19 @@ def analyze_software(api_key: str, software_list: list[dict[str, str]], logger: 
                 print(f"---> Уязвимости НЕ НАЙДЕНЫ!!!")
 
             # формируем общий список CVE по всем уязвимостям
-            cve_list = []
+            cve_list = set()
             for vulnerability in vulnerabilities:
-                cve_list.extend(vulnerability.get("cvelist", []))
+                cve_list = cve_list.union(vulnerability.get("cvelist", []))
             if cve_list and len(cve_list) > 0:
                 print(f"---> Сформирован список CVE (cve_list: {len(cve_list)})")
 
             # формируем общий список эксплойтов по всем уязвимостям
-            exploit_list = []
+            exploit_list = set()
             for vulnerability in vulnerabilities:
-                exploit_list.extend(vulnerability.get("exploit", {}).values())
+                exploitation = vulnerability.get("exploitation", {})
+                if exploitation and exploitation.get("wildExploited", False) and exploitation.get("wildExploitedSources", []):
+                    for exploited_source in exploitation.get("wildExploitedSources", []):
+                        exploit_list = exploit_list.union(exploited_source.get("idList", []))
             if exploit_list and len(exploit_list) > 0:
                 print(f"---> Сформирован список эксплойтов (exploit_list: {len(exploit_list)})")
 
@@ -311,7 +330,7 @@ def analyze_software(api_key: str, software_list: list[dict[str, str]], logger: 
                 "exploit_list": exploit_list,
                 "vulnerabilities": vulnerabilities
             }
-            program_summary = generate_program_summary(vulnerability_data)
+            program_summary = generate_program_summary(vulnerability_data, add_detalisation)
             if program_summary:
                 print(f"---> Сформирован отчет по найденным уязвимостям (program_summary)")
                 software_report.append({
@@ -355,8 +374,9 @@ def generate_report(software_report: list[dict[str,Any]], output_filename: str =
 
 if __name__ == "__main__":
     SOFTWARE = [
-        {"Program": "LibreOffice", "Version": "6.0.7"},
         {"Program": "7zip", "Version": "18.05"},
+        {"Program": "LibreOffice", "Version": "6.0.7"},
+
         {"Program": "Adobe Reader", "Version": "2018.011.20035"},
         {"Program": "nginx", "Version": "1.14.0"},
         {"Program": "Apache HTTP Server", "Version": "2.4.29"},
@@ -369,9 +389,9 @@ if __name__ == "__main__":
 
     try:
         logger = Logger()
-        software_report = analyze_software(API_KEY, SOFTWARE, logger)
+        software_report = analyze_software(API_KEY, SOFTWARE, logger=logger)
         if software_report:
-            generate_report(software_report, "vulners_software_report.txt", logger)
+            generate_report(software_report, "vulners_software_report.txt", logger=logger)
     except KeyboardInterrupt:
         print("\nПрервано пользователем...")
     except Exception as ex:
