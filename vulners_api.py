@@ -376,7 +376,6 @@ if __name__ == "__main__":
     SOFTWARE = [
         {"Program": "7zip", "Version": "18.05"},
         {"Program": "LibreOffice", "Version": "6.0.7"},
-
         {"Program": "Adobe Reader", "Version": "2018.011.20035"},
         {"Program": "nginx", "Version": "1.14.0"},
         {"Program": "Apache HTTP Server", "Version": "2.4.29"},
@@ -389,7 +388,8 @@ if __name__ == "__main__":
 
     try:
         logger = Logger()
-        software_report = analyze_software(API_KEY, SOFTWARE, logger=logger)
+        add_detalisation: bool = False  # режим добавления детализации в отчет
+        software_report = analyze_software(API_KEY, SOFTWARE, add_detalisation, logger=logger)
         if software_report:
             generate_report(software_report, "vulners_software_report.txt", logger=logger)
     except KeyboardInterrupt:
